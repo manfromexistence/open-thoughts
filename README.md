@@ -24,7 +24,7 @@ Our first goal is to curate a reasoning dataset to train state-of-the-art small 
 
 
 # News
-- **[2025/04/03]** 🎉 [OpenThoughts2](https://www.open-thoughts.ai/blog/thinkagain) is released with [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M), [OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B), and [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B).
+- **[2025/04/03]** 🎉 [OpenThinker2](https://www.open-thoughts.ai/blog/thinkagain) has arrived: [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M), [OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B), [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B).
 - **[2025/03/13]** 🎉 We release [an analysis of reasoning models](https://www.open-thoughts.ai/blog/aiw) on [Alice in Wonderland](https://github.com/LAION-AI/AIW).
 - **[2025/02/16]** 🎉 [OpenThinker on Ollama](https://ollama.com/library/openthinker) reaches 400k downloads.
 - **[2025/02/14]** 🎉 Chat with OpenThinker in the [online playground](https://playground.bespokelabs.ai/).
