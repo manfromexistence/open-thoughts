@@ -37,6 +37,8 @@ Our first goal is to curate a reasoning dataset to train state-of-the-art small 
 - **[2025/01/22]** 🎉 [Bespoke-Stratos-17k dataset](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k) and [Bespoke-Stratos-32B model](https://huggingface.co/bespokelabs/Bespoke-Stratos-32B) are [announced](https://www.bespokelabs.ai/blog/bespoke-stratos-the-unreasonable-effectiveness-of-reasoning-distillation).
 
 # Results
+Our [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B) model trained on [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M) is the state of the art open-data reasoning model.
+
 The numbers reported in the table below are evaluated with our open-source tool [Evalchemy](https://github.com/mlfoundations/Evalchemy).
 
 [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B) vs other 32B models
