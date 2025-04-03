@@ -42,22 +42,22 @@ Our [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B) mo
 The numbers reported in the table below are evaluated with our open-source tool [Evalchemy](https://github.com/mlfoundations/Evalchemy).
 
 [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B) vs other 32B models
-| Model            | Open Data? | Avg  | AIME24 | AIME25 | AMC23 | MATH500 | GPQA-D | LCBv2 |
-| ---------------- | ---------- | ---- | ------ | ------ | ----- | ------- | ------ | ----- |
-| OpenThinker-32B  | ✅          | 72.6 | 68.0   | 49.3   | 95.5  | 90.6    | 63.5   | 68.6  |
-| OpenThinker2-32B | ✅          | 76.1 | 76.7   | 58.7   | 94.0  | 90.8    | 64.1   | 72.5  |
-| R1-Distill-32B   | ❌          | 74.9 | 74.7   | 50.0   | 96.5  | 90.0    | 65.8   | 72.3  |
-| Light-R1-32B     | ✅          | 72.9 | 74.7   | 58.0   | 96.0  | 90.4    | 62.0   | 56.0  |
-| QwQ-32B          | ❌          | 80.9 | 78.0   | 62.0   | 98.0  | 91.6    | 66.3   | 89.2  |
+| Model                                                                                           | Data | AIME24 | AIME25 | AMC23 | MATH500 | GPQA-D | LCBv2 |
+| ----------------------------------------------------------------------------------------------- | ---- | ------ | ------ | ----- | ------- | ------ | ----- |
+| [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B)                       | ✅    | 76.7   | 58.7   | 94.0  | 90.8    | 64.1   | 72.5  |
+| [OpenThinker-32B](https://huggingface.co/open-thoughts/OpenThinker-32B)                         | ✅    | 68.0   | 49.3   | 95.5  | 90.6    | 63.5   | 68.6  |
+| [DeepSeek-R1-Distill-Qwen-32B](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) | ❌    | 74.7   | 50.0   | 96.5  | 90.0    | 65.8   | 72.3  |
+| [Light-R1-32B](https://huggingface.co/qihoo360/Light-R1-32B)                                    | ✅    | 74.7   | 58.0   | 96.0  | 90.4    | 62.0   | 56.0  |
+| [S1.1-32B](https://huggingface.co/simplescaling/s1.1-32B)                                       | ✅    | 59.3   | 42.7   | 91.5  | 87.4    | 62.0   | 58.7  |
 
 [OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B) vs other 7B models
-| Model            | Open Data? | Avg  | AIME24 | AIME25 | AMC23 | MATH500 | GPQA-D | LCBv2 |
-| ---------------- | ----- | ---- | ------ | ------ | ----- | ------- | ------ | ----- |
-| OpenThinker-7B   | ✅     | 48.9 | 31.3   | 23.3   | 74.5  | 83.2    | 42.9   | 38.0  |
-| OpenThinker2-7B  | ✅     | 61.0 | 50.0   | 33.3   | 89.5  | 88.4    | 49.3   | 55.6  |
-| R1-Distill-7B    | ❌     | 61.3 | 57.3   | 33.3   | 92.0  | 89.6    | 47.3   | 48.4  |
-| OlympicCoder-7B  | ✅     | 42.4 | 20.7   | 15.3   | 63.0  | 74.8    | 25.3   | 55.4  |
-| OpenR1-7B        | ✅     | 48.4 | 48.7   | 34.7   | 88.5  | 87.8    | 21.2   | 9.5   |
+| Model                                                                                         | Data | AIME24 | AIME25 | AMC23 | MATH500 | GPQA-D | LCBv2       |
+| --------------------------------------------------------------------------------------------- | ---- | ------ | ------ | ----- | ------- | ------ | ----------- |
+| [OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B)                       | ✅    | 50.0   | 33.3   | 89.5  | 88.4    | 49.3   | 55.6        |
+| [OpenThinker-7B](https://huggingface.co/open-thoughts/OpenThinker-7B)                         | ✅    | 31.3   | 23.3   | 74.5  | 83.2    | 42.9   | 38.0        |
+| [DeepSeek-R1-Distill-Qwen-7B](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) | ❌    | 57.3   | 33.3   | 92.0  | 89.6    | 47.3   | 48.4        |
+| [OlympicCoder-7B](https://huggingface.co/open-r1/OlympicCoder-7B)                             | ✅    | 20.7   | 15.3   | 63.0  | 74.8    | 25.3   | 55.4        |
+| [OpenR1-Qwen-7B](https://huggingface.co/open-r1/OpenR1-Qwen-7B)                               | ✅    | 48.7   | 34.7   | 88.5  | 87.8    | 21.2   | 9.5<br><br> |
 
 To mitigate variance in evaluation accuracy, we compute average scores over multiple evaluation runs with different seeds. We average over 5 runs for AIME and AMC, and 3 runs for the other tasks. No system prompt is used, the maximum token length is set to 32,768, and temperature is 0.7.
 
