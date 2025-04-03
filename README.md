@@ -155,5 +155,6 @@ What the open source community is building with OpenThoughts:
 - [CuratedThoughts](https://huggingface.co/datasets/bethgelab/CuratedThoughts) is a filtered version of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) to make it suitable for RL training
 - [OpenThoughts-114k-math](https://huggingface.co/datasets/open-r1/OpenThoughts-114k-math) is a filtered version of the math subset in [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) using [Math-Verify](https://github.com/huggingface/Math-Verify) verification on top of our LLM Judge with GT verification
 - [SmallThoughts](https://huggingface.co/datasets/SmallDoge/SmallThoughts) regenerates a 50k version of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) using a [fork](https://github.com/SmallDoges/small-thoughts) of this repo
+- [AM-DeepSeek-R1-Distilled-1.4M](https://huggingface.co/datasets/a-m-team/AM-DeepSeek-R1-Distilled-1.4M) is a state of the art reasoning dataset mix containing [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) and [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
 
 
