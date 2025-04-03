@@ -88,7 +88,7 @@ The recipe is outlined below:
     <img alt="Data Curation Recipe" width="100%" src="images/openthoughts2-diagram_dark.png">
 </picture>
 
-More details can be found in our [blog post](). 
+More details can be found in our [blog post](https://www.open-thoughts.ai/blog/thinkagain). 
 
 
 # OpenThoughts-114k Data Generation
@@ -112,7 +112,7 @@ More instructions are in [open_thoughts/README.md](open_thoughts/README.md).
 Training and evaluation code coming soon.
 
 # Links
-- 📊 [OpenThoughts2 and OpenThinker2 Blog Post]()
+- 📊 [OpenThoughts2 and OpenThinker2 Blog Post](https://www.open-thoughts.ai/blog/thinkagain)
 - 💻 [Open Thoughts GitHub Repository](https://github.com/open-thoughts/open-thoughts)
 - 🧠 [OpenThoughts2-1M dataset](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M)
 - 🤖 [OpenThinker2-7B model](https://huggingface.co/open-thoughts/OpenThinker2-7B)
