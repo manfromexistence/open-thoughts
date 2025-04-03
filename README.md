@@ -142,8 +142,9 @@ Open Thoughts is supported by
 - [Toyota Research Institute](https://www.tri.global)
 
 # Community
+[Make an edit](https://github.com/open-thoughts/open-thoughts/edit/main/README.md) to add your project!
 
-What the open source community is building with OpenThoughts and BespokeStratos ([make an edit](https://github.com/open-thoughts/open-thoughts/edit/main/README.md) to add your project!)
+What the open source community is building with OpenThoughts:
 
 - [Light-R1-SFT](https://huggingface.co/datasets/qihoo360/Light-R1-SFTData) includes examples from [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) and is used to train [Light-R1-14B-DS](https://huggingface.co/qihoo360/Light-R1-14B-DS), [Light-R1-32B](https://huggingface.co/qihoo360/Light-R1-32B), [Light-R1-7B-DS](https://huggingface.co/qihoo360/Light-R1-7B-DS), [Light-R1-32B-DS](https://huggingface.co/qihoo360/Light-R1-32B-DS)
 - [Traceback-12B](https://huggingface.co/secemp9/TraceBack-12b) is a reasoning model trained on a [dataset](https://huggingface.co/datasets/secemp9/instruction_solution_thought) that includes [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) and [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
