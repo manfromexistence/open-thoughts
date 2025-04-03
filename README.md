@@ -24,6 +24,7 @@ Our first goal is to curate a reasoning dataset to train state-of-the-art small 
 
 
 # News
+- **[2025/04/03]** 🎉 We release [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M), [OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B), and [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B).
 - **[2025/03/13]** 🎉 [OpenThoughts Alice in Wonderland Blogpost](https://www.open-thoughts.ai/blog/aiw) is out.
 - **[2025/02/16]** 🎉 [OpenThinker on Ollama](https://ollama.com/library/openthinker) reaches 400k downloads.
 - **[2025/02/14]** 🎉 Chat with OpenThinker in the [online playground](https://playground.bespokelabs.ai/).
@@ -38,35 +39,27 @@ Our first goal is to curate a reasoning dataset to train state-of-the-art small 
 # Results
 The numbers reported in the table below are evaluated with our open-source tool [Evalchemy](https://github.com/mlfoundations/Evalchemy).
 
-[OpenThinker-32B](https://huggingface.co/open-thoughts/OpenThinker-32B) vs other 32B models:
-| Model Name                   | AIME24 | AIME25 I | MATH500 | GPQA-Diamond | LCBv2 All |
-| ---------------------------- | ------ | -------- | ------- | ------------ | --------- |
-| OpenThinker-32B              | 66.0   | 53.3     | **90.6**| **61.6**     | 68.9      |
-| LIMO-32B                     | 56.7   | 49.3     | 86.6    | 58.1         | 60.0      |
-| s1-32B                       | 36.0   | 25.3     | 84.8    | 50.5         | 40.9      |
-| s1.1-32B                     | 64.7   | 49.3     | 89.0    | 60.1         | 65.5      |
-| DeepSeek-R1-Distill-Qwen-32B | **76.7**| **55.9**| 89.4    | 57.6         | **71.2**  |
+[OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B) vs other 32B models
+| Model            | Open Data? | Avg  | AIME24 | AIME25 | AMC23 | MATH500 | GPQA-D | LCBv2 |
+| ---------------- | ---------- | ---- | ------ | ------ | ----- | ------- | ------ | ----- |
+| OpenThinker-32B  | ✅          | 72.6 | 68.0   | 49.3   | 95.5  | 90.6    | 63.5   | 68.6  |
+| OpenThinker2-32B | ✅          | 76.1 | 76.7   | 58.7   | 94.0  | 90.8    | 64.1   | 72.5  |
+| R1-Distill-32B   | ❌          | 74.9 | 74.7   | 50.0   | 96.5  | 90.0    | 65.8   | 72.3  |
+| Light-R1-32B     | ✅          | 72.9 | 74.7   | 58.0   | 96.0  | 90.4    | 62.0   | 56.0  |
+| QwQ-32B          | ❌          | 80.9 | 78.0   | 62.0   | 98.0  | 91.6    | 66.3   | 89.2  |
 
-[OpenThinker-7B](https://huggingface.co/open-thoughts/OpenThinker-7B) vs other 7B models:
-| Model Name                   | AIME24 | MATH500 | GPQA-Diamond | LCBv2 Easy | LCBv2 Medium | LCBv2 Hard | LCBv2 All |
-| ---------------------------- | ------ | ------- | ------------ | ---------- | ------------ | ---------- | --------- |
-| OpenThinker-7B              | 31.3   | 83.0    | 42.4         | 75.3       | 28.6         | 6.5        | 39.9      |
-| Bespoke-Stratos-7B          | 22.7   | 79.6    | 38.9         | 71.4       | 25.2         | 0.8        | 35.8      |
-| DeepSeek-R1-Distill-Qwen-7B | 60.0   | **88.2**| 46.9         | 79.7       | 45.1         | 14.6       | 50.1      |
-| gpt-4o-0513                 | 8.6    | 75.8    | 46.5         | 87.4       | 42.7         | 8.9        | 50.5      |
-| o1-mini                     |**64.0**| 85.6    | **60.0**     | **92.8**   | **74.7**     | **39.8**   | **72.8**  |
+[OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B) vs other 7B models
+| Model            | Open Data? | Avg  | AIME24 | AIME25 | AMC23 | MATH500 | GPQA-D | LCBv2 |
+| ---------------- | ----- | ---- | ------ | ------ | ----- | ------- | ------ | ----- |
+| OpenThinker-7B   | ✅     | 48.9 | 31.3   | 23.3   | 74.5  | 83.2    | 42.9   | 38.0  |
+| OpenThinker2-7B  | ✅     | 61.0 | 50.0   | 33.3   | 89.5  | 88.4    | 49.3   | 55.6  |
+| R1-Distill-7B    | ❌     | 61.3 | 57.3   | 33.3   | 92.0  | 89.6    | 47.3   | 48.4  |
+| OlympicCoder-7B  | ✅     | 42.4 | 20.7   | 15.3   | 63.0  | 74.8    | 25.3   | 55.4  |
+| OpenR1-7B        | ✅     | 48.4 | 48.7   | 34.7   | 88.5  | 87.8    | 21.2   | 9.5   |
 
-Note: The AIME24 dataset has a small sample size, resulting in high variance in evaluation accuracy. To mitigate this, we updated the code to compute the average score over five evaluation runs with different seeds. No system prompt is used, the maximum token length is set to 32,768, and temperature is 0.7.
+To mitigate variance in evaluation accuracy, we compute average scores over multiple evaluation runs with different seeds. We average over 5 runs for AIME and AMC, and 3 runs for the other tasks. No system prompt is used, the maximum token length is set to 32,768, and temperature is 0.7.
 
 We are fully open-source. Our [model weights](https://huggingface.co/open-thoughts), [datasets](https://huggingface.co/open-thoughts), [data generation code](https://github.com/open-thoughts/open-thoughts), [evaluation code](https://github.com/mlfoundations/Evalchemy), and [training code](https://github.com/hiyouga/LLaMA-Factory) are all publicly available. 
-
-|  | Open Weights | Open Data | Open Code | 
-|--|--------------|-----------| --------- |
-|OpenThinker-7B|✅|[✅](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)|[✅](https://github.com/open-thoughts/open-thoughts) |
-|Bespoke-Stratos-7B|✅|[✅](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)|[✅](https://github.com/bespokelabsai/curator/tree/main/examples/bespoke-stratos-data-generation)|
-|DeepSeek-R1-Distill-Qwen-7B|✅|❌|❌|
-|gpt-4o-0513|❌|❌|❌|❌|
-|o1-mini|❌|❌|❌|❌|
 
 # Installation
 ```
@@ -84,9 +77,17 @@ export HF_ORG=your_org_id
 export HF_PRIVATE=false
 ```
 
-# Data Generation
+# OpenThoughts2-1M Data Generation
+The [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M) dataset is a combination of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k), [OpenR1](https://huggingface.co/open-r1), and our newly generated math and code reasoning data. We generate the additional math and code data by ablating on various question generation methodologies and sampling from the highest performing ones.
 
-Currently, we are generating data for the following domains:
+The recipe is outlined below: (insert diagram here).
+
+More details can be found in our [blog post](). 
+
+
+# OpenThoughts-114k Data Generation
+
+For OpenThoughts-114k, we generate data for the following domains:
 1. Code
 2. Math
 3. Science
@@ -105,15 +106,11 @@ More instructions are in [open_thoughts/README.md](open_thoughts/README.md).
 Training and evaluation code coming soon.
 
 # Links
-- 📊 [Open Thoughts Launch Blog Post](https://www.open-thoughts.ai/blog/launch)
-- 🧠 [OpenThoughts-114k dataset](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)
-- 🧠 [OpenThoughts-Unverified-173k dataset](https://huggingface.co/datasets/open-thoughts/OpenThoughts-Unverified-173k)
-- 🤖 [OpenThinker-32B model](https://huggingface.co/open-thoughts/OpenThinker-32B)
-- 🤖 [OpenThinker-7B model](https://huggingface.co/open-thoughts/OpenThinker-7B)
-- 📊 [Bespoke-Stratos Blog Post](https://www.bespokelabs.ai/blog/bespoke-stratos-the-unreasonable-effectiveness-of-reasoning-distillation)
-- 🧠 [Bespoke-Stratos-17k dataset](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
-- 🤖 [Bespoke-Stratos-32B model](https://huggingface.co/bespokelabs/Bespoke-Stratos-32B)
-- 🤖 [Bespoke-Stratos-7B model](https://huggingface.co/bespokelabs/Bespoke-Stratos-7B)
+- 📊 [OpenThoughts2 and OpenThinker2 Blog Post]()
+- 💻 [Open Thoughts GitHub Repository](https://github.com/open-thoughts/open-thoughts)
+- 🧠 [OpenThoughts2-1M dataset](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M)
+- 🤖 [OpenThinker2-7B model](https://huggingface.co/open-thoughts/OpenThinker2-7B)
+- 🤖 [OpenThinker2-32B model](https://huggingface.co/open-thoughts/OpenThinker2-32B)
 
 # Citation
 ```
@@ -136,4 +133,4 @@ Open Thoughts is supported by
 - [NSF IFML](https://www.ifml.institute/)
 - [UT Austin Machine Learning Lab](https://ml.utexas.edu/)
 - [Juelich Supercomputing Center](https://www.fz-juelich.de/en/ias/jsc)
-- Toyota Research Institute
+- [Toyota Research Institute](https://www.tri.global)
