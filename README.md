@@ -4,7 +4,7 @@
 <!-- markdownlint-disable no-duplicate-header -->
 
 <div align="center">
-  <img src="open_thoughts.png" width="60%" alt="Open Thoughts GitHub Repository" />
+  <img src="images/open_thoughts.png" width="60%" alt="Open Thoughts GitHub Repository" />
 </div>
 <p align="center">
   <a href="https://open-thoughts.ai">
@@ -80,7 +80,11 @@ export HF_PRIVATE=false
 # OpenThoughts2-1M Data Generation
 The [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M) dataset is a combination of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k), [OpenR1](https://huggingface.co/open-r1), and our newly generated math and code reasoning data. We generate the additional math and code data by ablating on various question generation methodologies and sampling from the highest performing ones.
 
-The recipe is outlined below: (insert diagram here).
+The recipe is outlined below:
+<picture>
+    <source media="(prefers-color-scheme: light)" width="100%" srcset="images/openthoughts2-diagram_dark.png">
+    <img alt="Data Curation Recipe" width="100%" src="images/openthoughts2-diagram.png">
+</picture>
 
 More details can be found in our [blog post](). 
 
@@ -95,8 +99,8 @@ For OpenThoughts-114k, we generate data for the following domains:
 
 The recipe is outlined below:
 <picture>
-    <source media="(prefers-color-scheme: light)" width="100%" srcset="diagram.png">
-    <img alt="Data Curation Recipe" width="100%" src="diagram_dark.png">
+    <source media="(prefers-color-scheme: light)" width="100%" srcset="images/diagram.png">
+    <img alt="Data Curation Recipe" width="100%" src="images/diagram_dark.png">
 </picture>
 
 More instructions are in [open_thoughts/README.md](open_thoughts/README.md).
