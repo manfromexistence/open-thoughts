@@ -82,8 +82,8 @@ The [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThought
 
 The recipe is outlined below:
 <picture>
-    <source media="(prefers-color-scheme: light)" width="100%" srcset="images/openthoughts2-diagram_dark.png">
-    <img alt="Data Curation Recipe" width="100%" src="images/openthoughts2-diagram.png">
+    <source media="(prefers-color-scheme: light)" width="100%" srcset="images/openthoughts2-diagram.png">
+    <img alt="Data Curation Recipe" width="100%" src="images/openthoughts2-diagram_dark.png">
 </picture>
 
 More details can be found in our [blog post](). 
