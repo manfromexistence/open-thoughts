@@ -80,7 +80,7 @@ export HF_PRIVATE=false
 ```
 
 # OpenThoughts2-1M Data Generation
-The [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M) dataset is a combination of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k), [OpenR1](https://huggingface.co/open-r1), and our newly generated math and code reasoning data. We generate the additional math and code data by ablating on various question generation methodologies and sampling from the highest performing ones.
+The [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M) dataset is a combination of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k), [OpenR1](https://huggingface.co/open-r1), and our newly generated math and code reasoning data. We generate the additional math and code data by ablating on 26 different question generation methodologies and sampling from the highest performing ones.
 
 The recipe is outlined below:
 <picture>
