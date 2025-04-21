@@ -5,7 +5,7 @@
 # Friday
 
 <div align="center">
-  <img src="open_thoughts.png" width="60%" alt="Open Thoughts GitHub Repository" />
+  <img src="images/open_thoughts.png" width="60%" alt="Open Thoughts GitHub Repository" />
 </div>
 <p align="center">
   <a href="https://open-thoughts.ai">
@@ -25,6 +25,9 @@ Our first goal is to curate a reasoning dataset to train state-of-the-art small 
 
 
 # News
+- **[2025/04/07]** 🎉 [OpenThoughts2-1M dataset](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M) is the #1 trending dataset on Hugging Face.
+- **[2025/04/03]** 🎉 [OpenThinker2](https://www.open-thoughts.ai/blog/thinkagain) has arrived: [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M), [OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B), [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B).
+- **[2025/03/13]** 🎉 We release [an analysis of reasoning models](https://www.open-thoughts.ai/blog/aiw) on [Alice in Wonderland](https://github.com/LAION-AI/AIW).
 - **[2025/02/16]** 🎉 [OpenThinker on Ollama](https://ollama.com/library/openthinker) reaches 400k downloads.
 - **[2025/02/14]** 🎉 Chat with OpenThinker in the [online playground](https://playground.bespokelabs.ai/).
 - **[2025/02/13]** 🎉 OpenThinker is now [available on Ollama](https://ollama.com/library/openthinker) for easy local inference.
@@ -36,37 +39,31 @@ Our first goal is to curate a reasoning dataset to train state-of-the-art small 
 - **[2025/01/22]** 🎉 [Bespoke-Stratos-17k dataset](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k) and [Bespoke-Stratos-32B model](https://huggingface.co/bespokelabs/Bespoke-Stratos-32B) are [announced](https://www.bespokelabs.ai/blog/bespoke-stratos-the-unreasonable-effectiveness-of-reasoning-distillation).
 
 # Results
+Our [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B) model trained on [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M) is the state of the art open-data reasoning model.
+
 The numbers reported in the table below are evaluated with our open-source tool [Evalchemy](https://github.com/mlfoundations/Evalchemy).
 
-[OpenThinker-32B](https://huggingface.co/open-thoughts/OpenThinker-32B) vs other 32B models:
-| Model Name                   |  AIME24 | AIME25 I | MATH500 | GPQA-Diamond | LCBv2 All|
-| ---------------------------- | ------ | -------- | ------- | ------ | ----- |
-| OpenThinker-32B              |  66.0   | 53.3     | 90.6    | 61.6   | 68.9  |
-| LIMO-32B                     |  56.7   | 49.3     | 86.6    | 58.1   | 60.0  |
-| s1-32B                       |  36.0   | 25.3     | 84.8    | 50.5   | 40.9  |
-| s1.1-32B                     |  64.7   | 49.3     | 89.0    | 60.1   | 65.5  |
-| DeepSeek-R1-Distill-Qwen-32B |  76.7   | 55.9     | 89.4    | 57.6   | 71.2  |
+[OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B) vs other 32B models
+| Model                                                                                           | Data | AIME24 | AIME25 | AMC23 | MATH500 | GPQA-D | LCBv2 |
+| ----------------------------------------------------------------------------------------------- | ---- | ------ | ------ | ----- | ------- | ------ | ----- |
+| [OpenThinker2-32B](https://huggingface.co/open-thoughts/OpenThinker2-32B)                       | ✅    | 76.7   | 58.7   | 94.0  | 90.8    | 64.1   | 72.5  |
+| [OpenThinker-32B](https://huggingface.co/open-thoughts/OpenThinker-32B)                         | ✅    | 68.0   | 49.3   | 95.5  | 90.6    | 63.5   | 68.6  |
+| [DeepSeek-R1-Distill-Qwen-32B](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) | ❌    | 74.7   | 50.0   | 96.5  | 90.0    | 65.8   | 72.3  |
+| [Light-R1-32B](https://huggingface.co/qihoo360/Light-R1-32B)                                    | ✅    | 74.7   | 58.0   | 96.0  | 90.4    | 62.0   | 56.0  |
+| [S1.1-32B](https://huggingface.co/simplescaling/s1.1-32B)                                       | ✅    | 59.3   | 42.7   | 91.5  | 87.4    | 62.0   | 58.7  |
 
-[OpenThinker-7B](https://huggingface.co/open-thoughts/OpenThinker-7B) vs other 7B models:
-|                             | AIME24   | MATH500 | GPQA-Diamond | LCBv2 Easy  | LCBv2 Medium  | LCBv2 Hard  | LCBv2 All  |
-| --------------------------- | -------- | ------- | ------------ | ----------- | ------------- | ----------- | ---------- |
-| OpenThinker-7B              | 31.3     | 83.0    | 42.4         | 75.3        | 28.6          | 6.5         | 39.9       |
-| Bespoke-Stratos-7B          | 22.7     | 79.6    | 38.9         | 71.4        | 25.2          | 0.8         | 35.8       |
-| DeepSeek-R1-Distill-Qwen-7B | 60       | 88.2    | 46.9         | 79.7        | 45.1          | 14.6        | 50.1       |
-| gpt-4o-0513                 | 8.6      | 75.8    | 46.5         | 87.4        | 42.7          | 8.9         | 50.5       |
-| o1-mini                     | 64.0     | 85.6    | 60           | 92.8        | 74.7          | 39.8        | 72.8       |
+[OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B) vs other 7B models
+| Model                                                                                         | Data | AIME24 | AIME25 | AMC23 | MATH500 | GPQA-D | LCBv2       |
+| --------------------------------------------------------------------------------------------- | ---- | ------ | ------ | ----- | ------- | ------ | ----------- |
+| [OpenThinker2-7B](https://huggingface.co/open-thoughts/OpenThinker2-7B)                       | ✅    | 50.0   | 33.3   | 89.5  | 88.4    | 49.3   | 55.6        |
+| [OpenThinker-7B](https://huggingface.co/open-thoughts/OpenThinker-7B)                         | ✅    | 31.3   | 23.3   | 74.5  | 83.2    | 42.9   | 38.0        |
+| [DeepSeek-R1-Distill-Qwen-7B](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) | ❌    | 57.3   | 33.3   | 92.0  | 89.6    | 47.3   | 48.4        |
+| [OlympicCoder-7B](https://huggingface.co/open-r1/OlympicCoder-7B)                             | ✅    | 20.7   | 15.3   | 63.0  | 74.8    | 25.3   | 55.4        |
+| [OpenR1-Qwen-7B](https://huggingface.co/open-r1/OpenR1-Qwen-7B)                               | ✅    | 48.7   | 34.7   | 88.5  | 87.8    | 21.2   | 9.5<br><br> |
 
-Note: The AIME24 dataset has a small sample size, resulting in high variance in evaluation accuracy. To mitigate this, we updated the code to compute the average score over five evaluation runs with different seeds. No system prompt is used, the maximum token length is set to 32,768, and temperature is 0.7.
+To mitigate variance in evaluation accuracy, we compute average scores over multiple evaluation runs with different seeds. We average over 5 runs for AIME and AMC, and 3 runs for the other tasks. No system prompt is used, the maximum token length is set to 32,768, and temperature is 0.7.
 
 We are fully open-source. Our [model weights](https://huggingface.co/open-thoughts), [datasets](https://huggingface.co/open-thoughts), [data generation code](https://github.com/open-thoughts/open-thoughts), [evaluation code](https://github.com/mlfoundations/Evalchemy), and [training code](https://github.com/hiyouga/LLaMA-Factory) are all publicly available. 
-
-|  | Open Weights | Open Data | Open Code | 
-|--|--------------|-----------| --------- |
-|OpenThinker-7B|✅|[✅](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)|[✅](https://github.com/open-thoughts/open-thoughts) |
-|Bespoke-Stratos-7B|✅|[✅](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)|[✅](https://github.com/bespokelabsai/curator/tree/main/examples/bespoke-stratos-data-generation)|
-|DeepSeek-R1-Distill-Qwen-7B|✅|❌|❌|
-|gpt-4o-0513|❌|❌|❌|❌|
-|o1-mini|❌|❌|❌|❌|
 
 # Installation
 ```
@@ -84,9 +81,21 @@ export HF_ORG=your_org_id
 export HF_PRIVATE=false
 ```
 
-# Data Generation
+# OpenThoughts2-1M Data Generation
+The [OpenThoughts2-1M](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M) dataset is a combination of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k), [OpenR1-Math](https://huggingface.co/datasets/open-r1/OpenR1-Math-Raw), and our newly generated math and code reasoning data. We generate the additional math and code data by ablating on 26 different question generation methodologies and sampling from the highest performing ones.
 
-Currently, we are generating data for the following domains:
+The recipe is outlined below:
+<picture>
+    <source media="(prefers-color-scheme: light)" width="100%" srcset="images/openthoughts2-diagram.png">
+    <img alt="Data Curation Recipe" width="100%" src="images/openthoughts2-diagram_dark.png">
+</picture>
+
+More details can be found in our [blog post](https://www.open-thoughts.ai/blog/thinkagain). 
+
+
+# OpenThoughts-114k Data Generation
+
+For OpenThoughts-114k, we generate data for the following domains:
 1. Code
 2. Math
 3. Science
@@ -94,8 +103,8 @@ Currently, we are generating data for the following domains:
 
 The recipe is outlined below:
 <picture>
-    <source media="(prefers-color-scheme: light)" width="100%" srcset="diagram.png">
-    <img alt="Data Curation Recipe" width="100%" src="diagram_dark.png">
+    <source media="(prefers-color-scheme: light)" width="100%" srcset="images/diagram.png">
+    <img alt="Data Curation Recipe" width="100%" src="images/diagram_dark.png">
 </picture>
 
 More instructions are in [open_thoughts/README.md](open_thoughts/README.md).
@@ -105,15 +114,11 @@ More instructions are in [open_thoughts/README.md](open_thoughts/README.md).
 Training and evaluation code coming soon.
 
 # Links
-- 📊 [Open Thoughts Launch Blog Post](https://www.open-thoughts.ai/blog/launch)
-- 🧠 [OpenThoughts-114k dataset](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)
-- 🧠 [OpenThoughts-Unverified-173k dataset](https://huggingface.co/datasets/open-thoughts/OpenThoughts-Unverified-173k)
-- 🤖 [OpenThinker-32B model](https://huggingface.co/open-thoughts/OpenThinker-32B)
-- 🤖 [OpenThinker-7B model](https://huggingface.co/open-thoughts/OpenThinker-7B)
-- 📊 [Bespoke-Stratos Blog Post](https://www.bespokelabs.ai/blog/bespoke-stratos-the-unreasonable-effectiveness-of-reasoning-distillation)
-- 🧠 [Bespoke-Stratos-17k dataset](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
-- 🤖 [Bespoke-Stratos-32B model](https://huggingface.co/bespokelabs/Bespoke-Stratos-32B)
-- 🤖 [Bespoke-Stratos-7B model](https://huggingface.co/bespokelabs/Bespoke-Stratos-7B)
+- 📊 [OpenThoughts2 and OpenThinker2 Blog Post](https://www.open-thoughts.ai/blog/thinkagain)
+- 💻 [Open Thoughts GitHub Repository](https://github.com/open-thoughts/open-thoughts)
+- 🧠 [OpenThoughts2-1M dataset](https://huggingface.co/datasets/open-thoughts/OpenThoughts2-1M)
+- 🤖 [OpenThinker2-7B model](https://huggingface.co/open-thoughts/OpenThinker2-7B)
+- 🤖 [OpenThinker2-32B model](https://huggingface.co/open-thoughts/OpenThinker2-32B)
 
 # Citation
 ```
@@ -127,7 +132,7 @@ Training and evaluation code coming soon.
 
 # About Us
 
-We are a team of researchers and engineers from [Bespoke Labs](https://www.bespokelabs.ai/), Stanford, University of California Berkeley, University of Washington, Juelich Supercomputing Center (JSC), LAION, UCLA, UNC Chapel Hill, UT Austin, and Toyota Research Institute united around building the best datasets (and thus the best models). See our previous works at [datacomp.ai](https://www.datacomp.ai/) and [mlfoundations](https://github.com/mlfoundations).
+We are a team of researchers and engineers from [Bespoke Labs](https://www.bespokelabs.ai/), Stanford, University of California Berkeley, University of Washington, UT Austin, Juelich Supercomputing Center (JSC), LAION, UCLA, UNC Chapel Hill, UT Austin, and Toyota Research Institute united around building the best datasets (and thus the best models). See our previous works at [datacomp.ai](https://www.datacomp.ai/) and [mlfoundations](https://github.com/mlfoundations).
 
 # Sponsors
 Open Thoughts is supported by 
@@ -136,4 +141,22 @@ Open Thoughts is supported by
 - [NSF IFML](https://www.ifml.institute/)
 - [UT Austin Machine Learning Lab](https://ml.utexas.edu/)
 - [Juelich Supercomputing Center](https://www.fz-juelich.de/en/ias/jsc)
-- Toyota Research Institute
+- [Toyota Research Institute](https://www.tri.global)
+
+# Community
+[Make an edit](https://github.com/open-thoughts/open-thoughts/edit/main/README.md) to add your project!
+
+What the open source community is building with OpenThoughts:
+
+- [Light-R1-SFT](https://huggingface.co/datasets/qihoo360/Light-R1-SFTData) includes examples from [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) and is used to train [Light-R1-14B-DS](https://huggingface.co/qihoo360/Light-R1-14B-DS), [Light-R1-32B](https://huggingface.co/qihoo360/Light-R1-32B), [Light-R1-7B-DS](https://huggingface.co/qihoo360/Light-R1-7B-DS), [Light-R1-32B-DS](https://huggingface.co/qihoo360/Light-R1-32B-DS)
+- [Traceback-12B](https://huggingface.co/secemp9/TraceBack-12b) is a reasoning model trained on a [dataset](https://huggingface.co/datasets/secemp9/instruction_solution_thought) that includes [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) and [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
+- [190+ public models on Hugging Face](https://huggingface.co/models?dataset=dataset:open-thoughts/OpenThoughts-114k) have been trained using [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k)
+- [100+ public models on Hugging Face](https://huggingface.co/models?dataset=dataset:bespokelabs/Bespoke-Stratos-17k) have been trained using [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
+- [Sky-T1](https://arxiv.org/abs/2502.07374) uses [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k) for their R1 SFT experiments
+- Ollama has [created quantized versions](https://ollama.com/library/openthinker) of the OpenThinker-7B and OpenThinker-32B models, for running locally on your laptop
+- [CuratedThoughts](https://huggingface.co/datasets/bethgelab/CuratedThoughts) is a filtered version of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) to make it suitable for RL training
+- [OpenThoughts-114k-math](https://huggingface.co/datasets/open-r1/OpenThoughts-114k-math) is a filtered version of the math subset in [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) using [Math-Verify](https://github.com/huggingface/Math-Verify) verification on top of our LLM Judge with GT verification
+- [SmallThoughts](https://huggingface.co/datasets/SmallDoge/SmallThoughts) regenerates a 50k version of [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) using a [fork](https://github.com/SmallDoges/small-thoughts) of this repo
+- [AM-DeepSeek-R1-Distilled-1.4M](https://huggingface.co/datasets/a-m-team/AM-DeepSeek-R1-Distilled-1.4M) is a state of the art reasoning dataset mix containing [OpenThoughts-114k](https://huggingface.co/datasets/open-thoughts/OpenThoughts-114k) and [Bespoke-Stratos-17k](https://huggingface.co/datasets/bespokelabs/Bespoke-Stratos-17k)
+
+
